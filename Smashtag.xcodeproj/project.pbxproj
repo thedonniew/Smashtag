@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F81E708F1AA26584003EA8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E708E1AA26584003EA8FA /* AppDelegate.swift */; };
-		F81E70911AA26584003EA8FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E70901AA26584003EA8FA /* ViewController.swift */; };
 		F81E70941AA26584003EA8FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81E70921AA26584003EA8FA /* Main.storyboard */; };
 		F81E70961AA26584003EA8FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81E70951AA26584003EA8FA /* Images.xcassets */; };
 		F81E70991AA26584003EA8FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F81E70971AA26584003EA8FA /* LaunchScreen.xib */; };
 		F81E70A51AA26584003EA8FA /* SmashtagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E70A41AA26584003EA8FA /* SmashtagTests.swift */; };
+		F81E70AF1AA266DD003EA8FA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E70AE1AA266DD003EA8FA /* CameraViewController.swift */; };
+		F81E70B11AA26799003EA8FA /* HashtagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E70B01AA26799003EA8FA /* HashtagViewController.swift */; };
+		F81E70B31AA2682A003EA8FA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81E70B21AA2682A003EA8FA /* MobileCoreServices.framework */; };
+		F81E70B51AA26931003EA8FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81E70B41AA26931003EA8FA /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		F81E70891AA26584003EA8FA /* Smashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81E708D1AA26584003EA8FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F81E708E1AA26584003EA8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F81E70901AA26584003EA8FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F81E70931AA26584003EA8FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F81E70951AA26584003EA8FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F81E70981AA26584003EA8FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F81E709E1AA26584003EA8FA /* SmashtagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmashtagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81E70A31AA26584003EA8FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F81E70A41AA26584003EA8FA /* SmashtagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashtagTests.swift; sourceTree = "<group>"; };
+		F81E70AE1AA266DD003EA8FA /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = ../CameraViewController.swift; sourceTree = "<group>"; };
+		F81E70B01AA26799003EA8FA /* HashtagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagViewController.swift; sourceTree = "<group>"; };
+		F81E70B21AA2682A003EA8FA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F81E70B41AA26931003EA8FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81E70B51AA26931003EA8FA /* AVFoundation.framework in Frameworks */,
+				F81E70B31AA2682A003EA8FA /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				F81E708B1AA26584003EA8FA /* Smashtag */,
+				F81E70B61AA26936003EA8FA /* Frameworks */,
 				F81E70A11AA26584003EA8FA /* SmashtagTests */,
 				F81E708A1AA26584003EA8FA /* Products */,
 			);
@@ -78,8 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				F81E708E1AA26584003EA8FA /* AppDelegate.swift */,
-				F81E70901AA26584003EA8FA /* ViewController.swift */,
 				F81E70921AA26584003EA8FA /* Main.storyboard */,
+				F81E70B01AA26799003EA8FA /* HashtagViewController.swift */,
+				F81E70AE1AA266DD003EA8FA /* CameraViewController.swift */,
 				F81E70951AA26584003EA8FA /* Images.xcassets */,
 				F81E70971AA26584003EA8FA /* LaunchScreen.xib */,
 				F81E708C1AA26584003EA8FA /* Supporting Files */,
@@ -110,6 +120,15 @@
 				F81E70A31AA26584003EA8FA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F81E70B61AA26936003EA8FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F81E70B41AA26931003EA8FA /* AVFoundation.framework */,
+				F81E70B21AA2682A003EA8FA /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81E70911AA26584003EA8FA /* ViewController.swift in Sources */,
 				F81E708F1AA26584003EA8FA /* AppDelegate.swift in Sources */,
+				F81E70AF1AA266DD003EA8FA /* CameraViewController.swift in Sources */,
+				F81E70B11AA26799003EA8FA /* HashtagViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
