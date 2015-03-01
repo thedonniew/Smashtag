@@ -109,11 +109,19 @@ class HashtagViewController: UIViewController, UIImagePickerControllerDelegate, 
     // MARK: - IB Actions
     // TODO: open camera again
     @IBAction func retakePhoto(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let cameraUI = UIImagePickerController()
+            cameraUI.sourceType = .Camera
+            cameraUI.mediaTypes = [kUTTypeImage]
+            cameraUI.allowsEditing = true
+            cameraUI.delegate = self
+            self.presentViewController(cameraUI, animated: true, completion: nil)
+        }
+        println("retake photo button pressed")
     }
     @IBAction func photographyButtonPressed(sender: AnyObject) {
         topicLabel.text = "PHOTOGRAPHY"
-        firstHashtag.text = "#sunset"
+        firstHashtag.text = "#blessed"
         secondHashtag.text = "#yolo"
         thirdHashtag.text = "#nofilter"
         fourthHashtag.text = "#instagood"
@@ -131,7 +139,7 @@ class HashtagViewController: UIViewController, UIImagePickerControllerDelegate, 
         fourthHashtag.text = "#OOTD"
         fifthHashtag.text = "#fashionblogger"
         sixthHashtag.text = "#fashionable"
-        seventhHashtag.text = "#fashiongram"
+        seventhHashtag.text = "#gorgeous"
         eighthHashtag.text = "#fashion"
         ninthHashtag.text = "#fashiongram"
     }
@@ -143,9 +151,9 @@ class HashtagViewController: UIViewController, UIImagePickerControllerDelegate, 
         fourthHashtag.text = "#outfit"
         fifthHashtag.text = "#runway"
         sixthHashtag.text = "#fashionshow"
-        seventhHashtag.text = "#glamorous"
+        seventhHashtag.text = "#glamour"
         eighthHashtag.text = "#diva"
-        ninthHashtag.text = "#fierce"
+        ninthHashtag.text = "#gorgeous"
     }
     
     @IBAction func foodButtonPressed(sender: AnyObject) {
@@ -155,9 +163,9 @@ class HashtagViewController: UIViewController, UIImagePickerControllerDelegate, 
         thirdHashtag.text = "#food"
         fourthHashtag.text = "#nomnom"
         fifthHashtag.text = "#eat"
-        sixthHashtag.text = "#cooking"
+        sixthHashtag.text = "#instafood"
         seventhHashtag.text = "#eating"
-        eighthHashtag.text = "#eatinggood"
+        eighthHashtag.text = "#ilovefood"
         ninthHashtag.text = "#foodlover"
     }
 }
