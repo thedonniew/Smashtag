@@ -16,7 +16,6 @@
 		F81E70B11AA26799003EA8FA /* HashtagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E70B01AA26799003EA8FA /* HashtagViewController.swift */; };
 		F81E70B31AA2682A003EA8FA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81E70B21AA2682A003EA8FA /* MobileCoreServices.framework */; };
 		F81E70B51AA26931003EA8FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81E70B41AA26931003EA8FA /* AVFoundation.framework */; };
-		F84BFF221AA299A100DF1815 /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BFF211AA299A100DF1815 /* PagedScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 		F81E70B01AA26799003EA8FA /* HashtagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagViewController.swift; sourceTree = "<group>"; };
 		F81E70B21AA2682A003EA8FA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F81E70B41AA26931003EA8FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		F84BFF211AA299A100DF1815 /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 				F81E708E1AA26584003EA8FA /* AppDelegate.swift */,
 				F81E70921AA26584003EA8FA /* Main.storyboard */,
 				F81E70B01AA26799003EA8FA /* HashtagViewController.swift */,
-				F84BFF211AA299A100DF1815 /* PagedScrollViewController.swift */,
 				F81E70AE1AA266DD003EA8FA /* CameraViewController.swift */,
 				F81E70951AA26584003EA8FA /* Images.xcassets */,
 				F81E70971AA26584003EA8FA /* LaunchScreen.xib */,
@@ -235,7 +232,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F81E708F1AA26584003EA8FA /* AppDelegate.swift in Sources */,
-				F84BFF221AA299A100DF1815 /* PagedScrollViewController.swift in Sources */,
 				F81E70AF1AA266DD003EA8FA /* CameraViewController.swift in Sources */,
 				F81E70B11AA26799003EA8FA /* HashtagViewController.swift in Sources */,
 			);
