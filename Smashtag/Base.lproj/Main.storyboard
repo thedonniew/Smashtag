@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pMp-h8-8hv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -35,13 +36,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ehF-Mf-Olg">
                                 <rect key="frame" x="0.0" y="124" width="320" height="320"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U0-1b-uhd">
+                                <rect key="frame" x="16" y="387" width="288" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6U0-1b-uhd" secondAttribute="bottom" constant="141" id="0dc-X8-B2Q"/>
+                            <constraint firstItem="6U0-1b-uhd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="323" id="1Gi-Ng-Scd"/>
                             <constraint firstItem="ehF-Mf-Olg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cjK-XA-lhs"/>
                             <constraint firstItem="ehF-Mf-Olg" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="j12-uI-eby"/>
                             <constraint firstAttribute="trailing" secondItem="ehF-Mf-Olg" secondAttribute="trailing" id="nLd-OE-avo"/>
+                            <constraint firstItem="6U0-1b-uhd" firstAttribute="centerX" secondItem="ehF-Mf-Olg" secondAttribute="centerX" id="qKV-hc-MdN"/>
                             <constraint firstItem="ehF-Mf-Olg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="u9j-Ek-HQb"/>
+                            <constraint firstItem="6U0-1b-uhd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="xAh-HJ-ltN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LJ1-Pl-EZx">
@@ -50,10 +61,11 @@
                                 <action selector="retakePhoto:" destination="vXZ-lx-hvc" id="BuG-ve-QVI"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="mdA-Eo-jKs"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="mdA-Eo-jKs"/>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="ehF-Mf-Olg" id="5Mu-H0-6tH"/>
+                        <outlet property="swipeLabel" destination="6U0-1b-uhd" id="A1D-fz-z0s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

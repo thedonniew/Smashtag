@@ -12,6 +12,10 @@ import MobileCoreServices
 class HashtagViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var swipeLabel: UILabel!
+    
+    let topics:[String] = ["Photography", "Fashion", "Modeling", "Food"]
+    var swipePosition = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,17 @@ class HashtagViewController: UIViewController, UIImagePickerControllerDelegate, 
             cameraUI.delegate = self
             self.presentViewController(cameraUI, animated: true, completion: nil)
         }
+        
+        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        
+        leftSwipe.direction = .Left
+        rightSwipe.direction = .Right
+        
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
+        
+        swipeLabel.text = topics[swipePosition]
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,6 +62,32 @@ class HashtagViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: - Swipe
+    
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Left) {
+            // Swipe forward
+            
+            swipePosition += 1
+            if swipePosition == topics.count {
+                swipePosition = 0
+            }
+            swipeLabel.text = topics[swipePosition]
+            println(swipePosition)
+        }
+        
+        if (sender.direction == .Right) {
+            // Swipe backward
+            
+            swipePosition -= 1
+            if swipePosition == -1 {
+                swipePosition = topics.count - 1
+            }
+            swipeLabel.text = topics[swipePosition]
+            println(swipePosition)
+        }
     }
     
     // MARK: - IB Actions
