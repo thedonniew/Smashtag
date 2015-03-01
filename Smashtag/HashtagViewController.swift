@@ -90,6 +90,12 @@ class HashtagViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
     
+    //Hide the status bar
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }
+    
     // MARK: - IB Actions
     // TODO: open camera again
     @IBAction func retakePhoto(sender: AnyObject) {
